@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabs materialize</title>
+    <title>Tabs materialize con API</title>
 
     <!-- cosas de materialize -->
     <link rel="stylesheet" href="css/materialize.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" media="screen,projection" />
-
 </head>
-
 <body>
     <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-        <div class="background">
-        <img src="img/sandias.jpg">
-        </div>
-        <a href="#user"><img class="circle" src="img/icono.png"></a>
-        <a href="#name"><span class="white-text name">Marta Arévalo</span></a>
-        <a href="#email"><span class="white-text email">marevalo@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><div class="user-view">
+            <div class="background">
+                <img src="img/sandias.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="img/icono.png"></a>
+            <a href="#name"><span class="white-text name">Marta Arévalo</span></a>
+            <a href="#email"><span class="white-text email">marevalo@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
     <ul id="tabs-swipe-demo" class="tabs">
-        <li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
-        <li class="tab col s3"><a class="active" href="#test-swipe-2">Test 2</a></li>
-        <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
-      </ul>
-    <div id="test-swipe-1" class="col s12 blue">Test 1</div>
-    <div id="test-swipe-2" class="col s12 red">Test 2</div>
-    <div id="test-swipe-3" class="col s12 green">Test 3</div>
+        <li class="tab col s3"><a class="active" href="#test-swipe-1">Pestaña 1</a></li>
+        <li class="tab col s3"><a href="#test-swipe-2">Pestaña 2</a></li>
+        <li class="tab col s3"><a href="#test-swipe-3">Pestaña 3</a></li>
+    </ul>
+
+    <div id="test-swipe-1" class="col s12 blue">
+        <button id="load-news-btn" class="btn">Cargar Amiibos</button>
+        <div id="news-container" class="row">
+            <!-- Los tres div de noticias se cargarán aquí -->
+        </div>
+    </div>
+
+    <div id="test-swipe-2" class="col s12 red">
+        <h4 id="amiibo-title"></h4>
+        <img id="amiibo-image" class="responsive-img" />
+        <p id="amiibo-details"></p>
+    </div>
+
+    <div id="test-swipe-3" class="col s12 green"></div>
+
     <!-- cosas de códova -->
     <script src="cordova.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/index.js"></script>
 </body>
-
 </html>
