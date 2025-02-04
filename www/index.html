@@ -42,12 +42,29 @@
     </div>
 
     <div id="test-swipe-2" class="col s12 red">
-        <h4 id="amiibo-title"></h4>
         <img id="amiibo-image" class="responsive-img" />
-        <p id="amiibo-details"></p>
+        <div class="info">
+            <h4 id="amiibo-title"></h4>
+            <p id="amiibo-details"></p>
+        </div>
     </div>
 
-    <div id="test-swipe-3" class="col s12 green"></div>
+    <div id="test-swipe-3" class="col s12 green">
+        <div class="container">
+            <div class="row center-align">
+                <div class="col s12">
+                    <script type="text/javascript" src="cordova.js"></script>
+                    <button id="btnCapture" class="btn waves-effect waves-light">
+                        <i class="material-icons left">camera_alt</i>
+                        SAY CHEEESE!
+                    </button>
+                </div>
+                <div class="col s12">
+                    <img id="userPhoto" style="max-width: 100%; margin-top: 20px; display: none;" alt="Foto capturada">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- cosas de códova -->
     <script src="cordova.js"></script>

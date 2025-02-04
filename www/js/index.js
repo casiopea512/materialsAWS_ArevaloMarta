@@ -83,4 +83,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return shuffled.slice(0, num); // Devolver los primeros 'num' elementos del array barajado
     }
+
+
+    // Manejo de la cámara
+    document.addEventListener('deviceready', function() {
+        console.log('Cordova está listo');
+        
+        document.getElementById("btnCapture").addEventListener("click", function() {
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 100,
+                destinationType: Camera.DestinationType.DATA_URL,
+                encodingType: Camera.EncodingType.JPEG,
+                mediaType: Camera.MediaType.PICTURE,
+                correctOrientation: true,
+                sourceType: Camera.PictureSourceType.CAMERA
+            });
+        });
+    });
+
+    function onSuccess(imageData) {
+        // Convertir la imagen a base64
+        const base64Image = imageData;
+
+        // Actualizar el avatar del menú lateral
+        document.querySelector('.circle').src = base64Image;
+
+        // Guardar en localStorage
+        localStorage.setItem("profilePhoto", base64Image);
+    }
+
+    function onFail(message) {
+        alert('Error: ' + message);
+    }
 });

@@ -10,3 +10,17 @@ html, body {
     height: 100%;
     overflow-y: scroll !important;
 }
+
+#test-swipe-2{
+    display: flex;
+    flex-direction: column;
+}
+
+#test-swipe-2 img{
+    width: 20%;
+    height: auto;
+}
+
+#test-swipe-2 .info{
+    flex-direction: column;
+}
